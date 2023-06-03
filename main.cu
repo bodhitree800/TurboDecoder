@@ -141,8 +141,8 @@ void full_decoder(int numb_of_bits, float snr, int iter_num, int blocks, int gua
 	}
 	hold2 = clock();
 	printf("Speed of decoding = %d Kbits/sec\n", (int)((numb_of_bits / ((double)(hold2 - hold1) / CLOCKS_PER_SEC)) / 1e3));
-	// printf("Time elapsed for decoding: %f\n", ((double)clock() - hold1) / CLOCKS_PER_SEC);
-	// printf("%d\n",(int)((numb_of_bits/((double)(hold2-hold1)/CLOCKS_PER_SEC))/1e3));
+	printf("Time elapsed for decoding: %f\n", ((double)clock() - hold1) / CLOCKS_PER_SEC);
+	printf("%d\n",(int)((numb_of_bits/((double)(hold2-hold1)/CLOCKS_PER_SEC))/1e3));
 	//**************************Freeing up cudahostalloc allocated memory**************************
 	cudaFreeHost(outbits_x);
 	cudaFreeHost(outbits_y1);
